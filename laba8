@@ -1,0 +1,29 @@
+#include  <stdio.h>
+
+#include <stdlib.h>
+
+int main(void){ 
+    
+    
+    int k;
+
+  struct mashina {
+            char marka[20];
+            int price_rub;
+            char color[20];
+            int year;
+      char potujnist_dviguna[20];}
+*ptr1, tachka[5]= {
+ { "volvo",197011, "red", 1970,"244"},
+{ "porsche",222260, "black", 1999,"330"},
+{"jiguli",20000, "irjavyi", 1992,"90"},
+{"volkswagen",400000, "grey", 1999,"190"} ,
+{"rollse-royce",2660000, "blue", 2015,"290"} };
+
+ ptr1= malloc(5*sizeof (struct mashina));
+for (k=0; k<5;  k=k+1)  {ptr1[k]=tachka[k];
+                         if (ptr1[k].price_rub <=20000){
+printf("mashina = %s\n price = %d\n color = %s\n year = %d\n potujnist_dviguna = %s\n", ptr1[k].marka,   ptr1[k].price_rub , ptr1[k].color , ptr1[k]. year , ptr1[k].potujnist_dviguna);  } }  free (ptr1);
+
+   
+}
